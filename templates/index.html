@@ -2,80 +2,32 @@
 <html>
 <head>
     <title>Drinker Prediction</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa; /* Light gray background */
-            color: #333; /* Dark text color */
-            margin: 20px;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        form {
-            background-color: #ffffff; /* White background */
-            border: 1px solid #ddd; /* Light gray border */
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow */
-            max-width: 600px;
-            margin: auto;
-        }
-        label {
-            display: block;
-            margin-bottom: 10px;
-            color: #555; /* Medium gray text color */
-        }
-        input[type="number"],
-        select {
-            width: calc(100% - 20px);
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc; /* Light gray border */
-            border-radius: 3px;
-            font-size: 16px;
-        }
-        button {
-            background-color: #007bff; /* Blue button color */
-            color: #fff; /* White text color */
-            padding: 10px 20px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-        }
-    </style>
 </head>
 <body>
     <h1>Drinker Prediction</h1>
     <form action="/predict" method="post">
-        <label>Sex:</label>
+        Sex:
         <select name="sex">
             <option value="0">Male</option>
             <option value="1">Female</option>
         </select>
-        <label>Age:</label>
+        Age:
         <input type="number" name="age" min="18" max="100" value="25">
-        <label>Height (cm):</label>
+        Height (cm):
         <input type="number" name="height" min="100" max="250" value="170">
-        <label>Waistline (cm):</label>
+        Waistline (cm):
         <input type="number" name="waistline" min="50" max="150" value="80">
-        <label>HDL Cholesterol (mg/dL):</label>
+        HDL Cholesterol (mg/dL):
         <input type="number" name="HDL_chole" min="0" max="100" value="50">
-        <label>LDL Cholesterol (mg/dL):</label>
+        LDL Cholesterol (mg/dL):
         <input type="number" name="LDL_chole" min="0" max="200" value="100">
-        <label>Hemoglobin (g/dL):</label>
+        Hemoglobin (g/dL):
         <input type="number" name="hemoglobin" min="0" max="20" value="14">
-        <label>SGOT/ALT (U/L):</label>
+        SGOT/ALT (U/L):
         <input type="number" name="SGOT_ALT" min="0" max="200" value="30">
-        <label>Gamma-GTP (U/L):</label>
+        Gamma-GTP (U/L):
         <input type="number" name="gamma_GTP" min="0" max="200" value="30">
-        <label>Smoking Status:</label>
+        Smoking Status:
         <select name="SMK_stat_type_cd">
             <option value="0">Non-Smoker</option>
             <option value="1">Ex-Smoker</option>
