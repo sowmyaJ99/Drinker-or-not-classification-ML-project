@@ -1,15 +1,22 @@
 import streamlit as st
 import pickle
 import numpy as np
+from sklearn.preprocessing import MinMaxScaler
 
 # Load the model
 model_path = 'gradient_boosting_model.pkl'
 with open(model_path, 'rb') as f:
     model = pickle.load(f)
 
+# Load the scaler
+scaler_path = 'scaler.pkl'
+with open(scaler_path, 'rb') as f:
+    scaler = pickle.load(f)
+
 # Define the prediction function
 def predict(input_data):
     input_data = np.array(input_data).reshape(1, -1)  # Ensure the input data is in the correct shape
+    input_data = scaler.transform(input_data)  # Scale the input data
     prediction = model.predict(input_data)
     return prediction[0]
 
